@@ -1,0 +1,36 @@
+{
+  "name": "website-starter",
+  "version": "1.0.0",
+  "description": "Gulp template for website development",
+  "homepage": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build --production",
+    "archive": "gulp archive --production",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "not ie <= 11",
+    "iOS >= 12"
+  ],
+  "keywords": [
+    "gulp",
+    "website",
+    "starter",
+    "template"
+  ],
+  "author": "Valerii Stolbov <stolbov.v@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.8.2"
+  }
+}
