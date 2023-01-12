@@ -1,6 +1,6 @@
 {
   "name": "website-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp template for website development",
   "homepage": "",
   "main": "gulpfile.js",
@@ -8,8 +8,8 @@
   "scripts": {
     "start": "gulp",
     "clean": "gulp clean",
-    "build": "gulp build",
-    "archive": "gulp archive",
+    "build": "gulp build --production",
+    "archive": "gulp archive --production",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
@@ -48,3 +48,4 @@
     "prettier": "2.8.2"
   }
 }
+

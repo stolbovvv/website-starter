@@ -17,10 +17,16 @@ const dir = {
   source: 'src',
 };
 
+// Setting: mode
+const mode = {
+  dev: !process.argv.includes('--production'),
+  prod: process.argv.includes('--production'),
+};
+
 // Task: handle styles
 function handleStyles() {
   return gulp
-    .src([`${dir.source}/styles/**/*.css`, `!${dir.source}/styles/**/*.min.css`], { sourcemaps: true })
+    .src([`${dir.source}/styles/**/*.css`, `!${dir.source}/styles/**/*.min.css`], { sourcemaps: mode.dev })
     .pipe(postcss([autoprefixer({ cascade: true })]))
     .pipe(gulp.dest(`${dir.build}/styles/`))
     .pipe(postcss([cssnano()]))
@@ -32,7 +38,7 @@ function handleStyles() {
 // Tast: handle scripts
 function handleScripts() {
   return gulp
-    .src([`${dir.source}/scripts/**/*.js`, `!${dir.source}/scripts/**/*.min.js`], { sourcemaps: true })
+    .src([`${dir.source}/scripts/**/*.js`, `!${dir.source}/scripts/**/*.min.js`], { sourcemaps: mode.dev })
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(gulp.dest(`${dir.build}/scripts/`))
     .pipe(terser({ toplevel: true }))
