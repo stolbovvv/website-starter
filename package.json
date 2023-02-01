@@ -1,6 +1,6 @@
 {
   "name": "website-starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp template for website development",
   "homepage": "",
   "main": "gulpfile.js",
@@ -38,6 +38,7 @@
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.1",
@@ -48,4 +49,3 @@
     "prettier": "2.8.2"
   }
 }
-
